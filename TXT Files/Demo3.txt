@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOW DATA WITH JAVASCRIPT</title>
+</head>
+<body>
+    <h1>INPUT DATA</h1>
+    <label for="udata">Name</label>
+    <input type="text" id="udata" placeholder="Name">
+    <input type="button" id="button" value="Click Me">
+    <h4 id="showdata"></h4>
+    <script>
+       const var1 = document.getElementById('udata');
+       const var2 = document.getElementById('button');
+       const var3 = document.getElementById('showdata');
+
+       function showdata() {
+        var3.innerHTML = var1.value;
+       }
+       var2.addEventListener('click', showdata);
+    </script>
+ </body>
+</html>
