@@ -1,0 +1,188 @@
+JS FORM SUBMISSION
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FORM SUBMISSION</title>
+</head>
+<body>
+    <h1>FORM</h1>
+    <p id="data"></p>
+    <form action="external.php" method="post" onsubmit="return validate()">
+        <input type="text" name="uname" id="uname">
+        <input type="submit" name="submit" value="submit">
+    </form>
+    <script>
+           
+
+          function validate() {
+            var x = document.getElementById('uname').value;
+              if (x=="") {
+                  document.getElementById('data').innerHTML = "No Data Provided";
+                  return false;
+              }
+          
+          }
+
+    </script>
+</body>
+</html>
+-----------------------------------------------------
+Cookie
+index.php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie</title>
+</head>
+<body>
+
+        <?php
+                setcookie('sectione', '41');                 
+
+        ?>
+
+</body>
+</html>
+
+page1.php
+<?php
+    setcookie('sectione', '41', time()-10); // remove cookie
+
+?>
+
+page2.php
+<?php
+
+    echo $_COOKIE['sectione'];
+
+
+?>
+------------------------------------------------------
+Session
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie</title>
+</head>
+<body>
+
+    <h1>Form</h1>
+    <form action="page1.php" method="post">
+        <input type="text" name="uname" placeholder="Name">
+        <input type="submit" name="submit" value="submit">
+    </form>
+
+</body>
+</html>
+
+page1.php
+
+<?php
+
+        session_start();
+        $_SESSION['username'] = $_POST['uname'];
+        echo "Session has been set";
+
+?>
+
+page2.php
+<?php
+        session_start();
+        if (count($_SESSION) > 0) {
+            echo "Hello ".$_SESSION['username'];
+        }
+        else {
+            echo "No Session Data";
+        }
+
+?>
+logout.php
+<?php
+    session_start();
+
+    session_unset(); // variables nullified
+
+    session_destroy();
+
+?>
+-----------------------------------------------------------
+
+MYSQL DATA FETCH
+
+index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DB ACCESS</title>
+</head>
+<body>
+        <h1>Form</h1>
+        <form action="process.php" method="post">
+            <input type="text" name="uname" placeholder="Name">
+            <input type="text" name="age" placeholder="Age">
+            <input type="submit" name="submit" value="submit">
+        </form>
+</body>
+</html>
+
+process.php
+
+<?php 
+// INSERT
+//     $uname = $_POST['uname'];
+//     $age = $_POST['age'];
+//     // Connection String
+//     $con = mysqli_connect("localhost", "root", "", "sampledb"); 
+
+//     $sql = "INSERT INTO mytable (name, age) VALUES ('$uname', '$age')";
+
+//    if (mysqli_query($con, $sql)) {
+//     echo "Inserted....";
+//    }
+
+// MODIFY
+
+//     $con = mysqli_connect("localhost", "root", "", "sampledb"); 
+
+//     $sql = "UPDATE mytable SET age = 18 WHERE name ='SAM'";
+
+//        if (mysqli_query($con, $sql)) {
+//         echo "Updated....";
+//    }
+//  READ
+
+    // $con = mysqli_connect("localhost", "root", "", "sampledb"); 
+    // $sql = "SELECT name, age FROM mytable";
+
+    // $obj = mysqli_query($con, $sql);
+
+    // $entry = mysqli_fetch_assoc($obj); // Creating associative array
+    // echo  mysqli_num_rows($obj)."<br>";
+    //     if (mysqli_num_rows($obj) == 1) {
+    // echo $entry['name'];
+    // echo "<br>";
+    // echo $entry['age'];
+    //     }
+
+// DELETE
+
+
+     $con = mysqli_connect("localhost", "root", "", "sampledb"); 
+     $sql = "DELETE FROM mytable WHERE name=\"SAM\"";
+
+    if(mysqli_query($con, $sql)) {
+        echo "Deleted....";
+    }
+
+?>
+
