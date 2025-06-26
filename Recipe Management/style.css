@@ -1,0 +1,523 @@
+/* Reset and global styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e0f7ff, #ffffff);
+    color: #004a99;
+}
+
+/* Central card */
+.card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 700px;
+    width: 100%;
+}
+
+/* Headings */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+    font-weight: 300;
+    color: #006bbf;
+}
+
+/* Grid container for buttons */
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* Button styling */
+.container form button {
+    width: 100%;
+    padding: 15px 0;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: none;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: #ffffff;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Focus outline only */
+.container form button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+/* Signup-page extensions */
+.signup-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px 40px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+}
+
+.signup-container h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #004a99;
+}
+
+.signup-container input,
+.signup-container button {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.signup-container input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #999;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+}
+
+.signup-container button {
+    padding: 12px 0;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: none;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.signup-container button:hover {
+    background-color: #0056b3;
+}
+
+.signup-container .back-form button {
+    background-color: #6c757d;
+}
+
+.signup-container .back-form button:hover {
+    background-color: #5a6268;
+}
+
+
+/* Login-page extensions */
+.login-container,
+.signup-container {
+    margin: auto;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px 40px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+.login-container h1,
+.signup-container h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #004a99;
+}
+
+.login-container input,
+.login-container button {
+    width: 100%;
+    margin: 10px 0;
+}
+
+/* Reuse signup button styles */
+.login-container button {
+    padding: 12px 0;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: none;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background-color: #0056b3;
+}
+/* Reset and global styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e0f7ff, #ffffff);
+    color: #004a99;
+}
+
+/* Central card (used for index and adminlogin pages) */
+.card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 700px;
+    width: 100%;
+}
+
+/* Headings */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+    font-weight: 300;
+    color: #006bbf;
+}
+
+/* Button grid container (for index/adminlogin) */
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* Button styling (shared) */
+.container form button,
+.signup-container button,
+.login-container button {
+    width: 100%;
+    padding: 15px 0;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: none;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: #ffffff;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Remove hover animation */
+.container form button:hover,
+.signup-container button:hover,
+.login-container button:hover {
+    /* No animation: keep background stable */
+    background-color: #007bff;
+}
+
+/* Focus outline only */
+.container form button:focus,
+.signup-container button:focus,
+.login-container button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+/* Signup & Login container */
+.signup-container,
+.login-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px 40px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+}
+
+/* Form headings */
+.signup-container h1,
+.login-container h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #004a99;
+}
+
+/* Inputs & buttons in forms */
+.signup-container input,
+.login-container input {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #999;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+}
+
+.signup-container button,
+.login-container button {
+    margin: 10px 0;
+    padding: 12px 0;
+}
+
+/* Back button styling */
+.signup-container .back-form button,
+.login-container .back-form button {
+    background-color: #6c757d;
+}
+
+.signup-container .back-form button:hover,
+.login-container .back-form button:hover {
+    background-color: #6c757d;
+}
+
+/* Home page header and buttons */
+.home-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    width: 100%;
+    margin: 40px auto 20px;
+    padding: 0 20px;
+}
+
+.home-header h1 {
+    font-size: 2rem;
+    color: #004a99;
+    font-weight: 600;
+    margin: 0;
+}
+
+.home-header .btn-group {
+    display: flex;
+    gap: 10px;
+}
+
+.home-header .btn-group button {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 6px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: none;   /* no hover animation */
+}
+
+.home-header .btn-group button:hover {
+    background-color: #007bff; /* keep constant */
+}
+
+.home-header .btn-group button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0,123,255,0.5);
+}
+
+/* Posts container */
+.home-container {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto 40px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Individual post card */
+.post {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Post title */
+.post h2 {
+    font-size: 1.75rem;
+    color: #004a99;
+    margin-bottom: 10px;
+}
+
+/* Post body: wrap very long text */
+.post .post-body {
+    white-space: pre-wrap;    /* preserve line breaks */
+    word-break: break-word;   /* break long words or URLs */
+    line-height: 1.6;
+    font-size: 1rem;
+    color: #004a99;
+}
+
+/* Admin page wrapper */
+.admin-container {
+    max-width: 900px;
+    width: 100%;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(255,255,255,0.95);
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Optional header (title + actions) */
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.admin-header h1 {
+    font-size: 2rem;
+    color: #004a99;
+    font-weight: 600;
+    margin: 0;
+}
+
+.admin-header .btn-group button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 6px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: none;
+}
+
+.admin-header .btn-group button:hover {
+    background-color: #007bff;
+}
+
+/* Table styling */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.admin-table th,
+.admin-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+    color: #004a99;
+}
+
+.admin-table th {
+    background-color: #f0f8ff;
+    font-weight: 600;
+}
+
+.admin-table tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+/* Form styling inside admin */
+.admin-form {
+    margin-bottom: 30px;
+}
+
+.admin-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #004a99;
+}
+
+.admin-form input,
+.admin-form select,
+.admin-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #f3f3f3;
+    font-size: 1rem;
+}
+
+/* Action buttons in table or forms */
+.admin-button {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.admin-button.edit {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.admin-button.delete {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+/* Remove hover animation */
+.admin-button:hover {
+    background-color: inherit;
+}
+
+.admin-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0,123,255,0.5);
+}
+
+
+
+
